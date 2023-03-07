@@ -18,13 +18,14 @@
 }
 body {
     background-color: #393E46;
+    flex-wrap: wrap;
   }
   p {
     font-size: 2rem;
     color: #4ECCA3;
     font-family: 'Indie Flower', cursive;
     margin-bottom: 0%;
-    
+    flex-wrap: wrap;
   }
   #p1name{
     margin-top: 0%;
@@ -49,6 +50,7 @@ body {
     width: 55%;
     margin-top: 30px;
     margin-right:50px ;
+    flex-wrap: wrap;
   }
   
   footer{
@@ -59,6 +61,7 @@ body {
   }
   button{
     display: initial;
+    flex-wrap: wrap;
     cursor: pointer;
     border-radius: 5px;
     color: #fff;
@@ -70,15 +73,13 @@ body {
     top: -35px;
     left: 20px;
     border: 1px solid black;
-    flex-wrap: wrap;
+    
   }
   input{
     padding: 3px 7px;
     border-radius: 3px;
     background-color: #4ECCA3;
     font-weight: 600;
-   
-    
   }
   button:hover{
     background-color: #4ECCA3;
