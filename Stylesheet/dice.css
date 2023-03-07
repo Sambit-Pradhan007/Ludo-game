@@ -60,7 +60,7 @@ body {
     font-family: 'Lobster', cursive;
   }
   button{
-    display: initial;
+    
     flex-wrap: wrap;
     cursor: pointer;
     border-radius: 5px;

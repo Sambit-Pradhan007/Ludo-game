@@ -3,7 +3,7 @@ var P2=prompt("Enter Player2  Name below");
 
 document.getElementById("p1name").innerText=P1;
 document.getElementById("p2name").innerText=P2;
-
+alert("Anyone can Start the Game");
 
 let p1sum=0;
 function randomnum1(){
@@ -60,8 +60,12 @@ btn.addEventListener("click",pointschange1);
 // btn.addEventListener("click",count1);
 btn.addEventListener("click",hide1);
 function hide1(){
+    if(p1sum>100){
+        document.getElementById("player1").style.display="none";
+    }else{
     document.getElementById("player1").style.display="none";
     document.getElementById("player2").style.display="initial";
+    }
 }
 
 
@@ -120,6 +124,10 @@ btn2.addEventListener("click",pointschange2);
 // btn2.addEventListener("click",count2);
 btn2.addEventListener("click",hide2);
 function hide2(){
+    if(p2sum>100){
+        document.getElementById("player2").style.display="none";
+    }else{
     document.getElementById("player2").style.display="none";
     document.getElementById("player1").style.display="initial";
+    }
 }
