@@ -1,0 +1,126 @@
+.container{
+    font-size: 2rem;
+    color: aquamarine;
+    text-align: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.dice{
+    text-align: center;
+    display: inline-block;
+    flex-wrap: wrap;
+}
+.hero{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+body {
+    background-color: #393E46;
+  }
+  p {
+    font-size: 2rem;
+    color: #4ECCA3;
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: 0%;
+    
+  }
+  #p1name{
+    margin-top: 0%;
+    margin-right: 60%;
+  }
+  #p2name{
+    margin-top: 0%;
+    margin-right: 60%;
+  }
+  #point1{
+   margin-right: 30%;
+  }
+  
+  h1 {
+    margin: 0px;
+    font-family: 'Lobster', cursive;
+    text-shadow: 5px 0 #232931;
+    font-size: 4rem;
+    color: #4ECCA3;
+  }  
+  img {
+    width: 55%;
+    margin-top: 30px;
+    margin-right:50px ;
+  }
+  
+  footer{
+    margin-top: 70px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+  }
+  button{
+    display: initial;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #232931;
+    padding: 7px 20px;
+    letter-spacing: 2px;
+    font-size: 16px;
+    position:relative;
+    top: -35px;
+    left: 20px;
+    border: 1px solid black;
+    flex-wrap: wrap;
+  }
+  input{
+    padding: 3px 7px;
+    border-radius: 3px;
+    background-color: #4ECCA3;
+    font-weight: 600;
+   
+    
+  }
+  button:hover{
+    background-color: #4ECCA3;
+    color: red;
+    transform: scale(1.1);
+    border: none;
+    font-weight: 600;
+  }
+  input:hover{
+    border-color: aqua;
+    border: none;
+  }
+  footer div{
+    margin-top: 0%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+footer ul{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    gap: 50px;
+    height: 50px;
+    margin-top: 1%;
+}
+footer ul li a img{
+    
+  height: 30px;
+  width: 30px;
+  color: #fff;
+  
+}
+footer ul li a img:hover{
+  height: 40px;
+  width: 40px;
+  color: aqua;
+ outline-style: solid;
+ border-radius: 10px;
+}
+ 
+  
+  
