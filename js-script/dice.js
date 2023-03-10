@@ -5,10 +5,10 @@ var P2=prompt("Enter Player2  Name below");
 document.getElementById("p1name").innerText=P1;
 document.getElementById("p2name").innerText=P2;
 alert("Anyone can Start the Game");
-var ludosong=new Audio("Ludo.mp3");
-ludosong.play();
-ludosong.volume=0.1;
-ludosong.loop=true;
+ var audio=new Audio("Ludo.mp3");
+ audio.play();
+ audio.volume=0.1;
+ audio.loop=true;
 let p1sum=0;
 function randomnum1(){
 //    to get random number
@@ -19,7 +19,8 @@ function randomnum1(){
 
 // for image change1
 function imagechange(){
-   ludosong.pause();
+    audio.pause();
+//    ludosong.stop();
     // getting random num
     let num1= randomnum1();
     // setting image for image/player1
