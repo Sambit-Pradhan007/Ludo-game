@@ -1,13 +1,14 @@
-var ludosong=new Audio("Ludo.mp3");
-ludosong.volume=0.1;
-ludosong.play();
-ludosong.loop=true;
+
 var P1=prompt("Enter Player1 Name below");
 var P2=prompt("Enter Player2  Name below");
 
 document.getElementById("p1name").innerText=P1;
 document.getElementById("p2name").innerText=P2;
 alert("Anyone can Start the Game");
+var ludosong=new Audio("Ludo.mp3");
+ludosong.play();
+ludosong.volume=0.1;
+ludosong.loop=true;
 let p1sum=0;
 function randomnum1(){
 //    to get random number
@@ -18,7 +19,7 @@ function randomnum1(){
 
 // for image change1
 function imagechange(){
-    ludosong.pause();
+   ludosong.pause();
     // getting random num
     let num1= randomnum1();
     // setting image for image/player1
@@ -42,7 +43,7 @@ function imagechange(){
 function makesound(){
     var dice1=new Audio("throughdice.mp3");
     dice1.play();
-    dice1.volume=0.5;
+    dice1.volume=0.3;
 }
 // adding points
 function pointschange1(){
