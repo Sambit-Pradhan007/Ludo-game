@@ -1,10 +1,13 @@
+var ludosong=new Audio("Ludo.mp3");
+ludosong.volume=0.1;
+ludosong.play();
+ludosong.loop=true;
 var P1=prompt("Enter Player1 Name below");
 var P2=prompt("Enter Player2  Name below");
 
 document.getElementById("p1name").innerText=P1;
 document.getElementById("p2name").innerText=P2;
 alert("Anyone can Start the Game");
-
 let p1sum=0;
 function randomnum1(){
 //    to get random number
@@ -15,6 +18,7 @@ function randomnum1(){
 
 // for image change1
 function imagechange(){
+    ludosong.pause();
     // getting random num
     let num1= randomnum1();
     // setting image for image/player1
@@ -38,6 +42,7 @@ function imagechange(){
 function makesound(){
     var dice1=new Audio("throughdice.mp3");
     dice1.play();
+    dice1.volume=0.5;
 }
 // adding points
 function pointschange1(){
@@ -47,6 +52,7 @@ function pointschange1(){
     // showing who and how much points got
     var pname1=document.getElementById("p1name").innerText;
     if(p1sum>100){
+        ludosong.play();
         document.querySelector("h1").textContent="🚩 "+pname1 + " Wins";
         document.getElementById("player1").style.display="none";
         return;
@@ -55,6 +61,9 @@ function pointschange1(){
         document.querySelector("#point1").innerText="Points:- "+p1sum;
      document.querySelector("h1").textContent="YaY "+ pname1+" got "+gotnum1+" point.";
      },2000);
+     setTimeout(()=>{
+        document.querySelector("h1").textContent="";
+     },10);
      
      return p1sum;
 }
@@ -127,6 +136,7 @@ return num2;
  
  var pname2=document.getElementById("p2name").innerText;
  if(p2sum > 100){
+    ludosong.play();
     document.querySelector("h1").textContent=pname2+" Wins 🚩";
     document.getElementById("player2").style.display="none";
     return p2sum;
@@ -136,6 +146,9 @@ return num2;
     document.querySelector(".point2").innerText="Points:- "+p2sum;
     document.querySelector("h1").textContent="YaY "+pname2+" got "+gotnum +" point.";
  },2000);
+ setTimeout(()=>{
+    document.querySelector("h1").textContent="";
+ },10);
  
  return p2sum;
  }
