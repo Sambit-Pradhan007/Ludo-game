@@ -23,18 +23,27 @@ function imagechange(){
     document.getElementById("player1").style.backgroundColor="grey";
     // getting the source of image1 and setting/changing
     var image1=document.querySelectorAll("img")[0];
-    image1.setAttribute("src" , imagename);
+    makesound();
+    setTimeout(()=>{
+       image1.setAttribute("src" , imagename);
+    },2000);
+    
     // button1 color adding
     document.getElementById("player1").style.backgroundColor="#4ECCA3";
     document.getElementById("player1").style.color="black";
     return num1;
-}
 
+}
+// Sound
+function makesound(){
+    var dice1=new Audio("throughdice.mp3");
+    dice1.play();
+}
 // adding points
 function pointschange1(){
     let gotnum1=imagechange();
     p1sum+=gotnum1;
-    document.querySelector("#point1").innerText="Points:- "+p1sum;
+    
     // showing who and how much points got
     var pname1=document.getElementById("p1name").innerText;
     if(p1sum>100){
@@ -42,7 +51,11 @@ function pointschange1(){
         document.getElementById("player1").style.display="none";
         return;
      }
+     setTimeout(()=>{
+        document.querySelector("#point1").innerText="Points:- "+p1sum;
      document.querySelector("h1").textContent="YaY "+ pname1+" got "+gotnum1+" point.";
+     },2000);
+     
      return p1sum;
 }
 // let player1count=0;
@@ -60,12 +73,17 @@ btn.addEventListener("click",pointschange1);
 // btn.addEventListener("click",count1);
 btn.addEventListener("click",hide1);
 function hide1(){
-    if(p1sum>100){
+    
+        if(p1sum>100){
+            document.getElementById("player1").style.display="none";
+        }else{
         document.getElementById("player1").style.display="none";
-    }else{
-    document.getElementById("player1").style.display="none";
-    document.getElementById("player2").style.display="initial";
-    }
+        setTimeout(()=>{
+        document.getElementById("player2").style.display="initial";
+        },2500)
+        }
+    
+    
 }
 
 
@@ -88,25 +106,37 @@ function imagechange2(){
     //Setting image to transform a little.
     var image2=document.querySelectorAll("img")[1];
     image2.style.appearance="easein";
-    // Set attribute for image chnage
+    // Make sound throughing dice
+    makesound();
+    setTimeout(()=>{
+       // Set attribute for image chnage
     image2.setAttribute("src" , name2);
+     },2000);
+    
     // Styling the butoon.
     document.getElementById("player2").style.backgroundColor="#4ECCA3";
     document.getElementById("player2").style.color="black";
 return num2;
 }
+
+
  // adding points
  function pointschange2(){
    let gotnum=imagechange2();
   p2sum+=gotnum
- document.querySelector(".point2").innerText="Points:- "+p2sum;
+ 
  var pname2=document.getElementById("p2name").innerText;
  if(p2sum > 100){
     document.querySelector("h1").textContent=pname2+" Wins 🚩";
     document.getElementById("player2").style.display="none";
     return p2sum;
  }
- document.querySelector("h1").textContent="YaY "+pname2+" got "+gotnum +" point.";
+
+ setTimeout(()=>{
+    document.querySelector(".point2").innerText="Points:- "+p2sum;
+    document.querySelector("h1").textContent="YaY "+pname2+" got "+gotnum +" point.";
+ },2000);
+ 
  return p2sum;
  }
 
@@ -128,6 +158,9 @@ function hide2(){
         document.getElementById("player2").style.display="none";
     }else{
     document.getElementById("player2").style.display="none";
-    document.getElementById("player1").style.display="initial";
+    setTimeout(()=>{
+        document.getElementById("player1").style.display="initial";
+        },2500)
+   
     }
 }
